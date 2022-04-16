@@ -1,6 +1,6 @@
 package com.wustzdy.springboot.crud.dao;
 
-import com.wustzdy.springboot.crud.entity.User;
+import com.wustzdy.springboot.crud.entity.UserEntity;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
@@ -13,11 +13,11 @@ public interface UserDao {
              @Result(property = "userAge", column = "user_age")
      })*/
     @Select("SELECT * FROM user WHERE user_age = #{age}")
-    List<User> get(@Param("age") int age);
+    List<UserEntity> get(@Param("age") int age);
 
     @Insert("INSERT INTO user(name, age) VALUES (#{name}, #{age})")
         //3
-    void insert(User user);
+    void insert(UserEntity user);
 
     /*@Results({ //2
             @Result(property = "id", column = "id"), //2

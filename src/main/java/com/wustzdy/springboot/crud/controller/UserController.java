@@ -1,6 +1,6 @@
 package com.wustzdy.springboot.crud.controller;
 
-import com.wustzdy.springboot.crud.entity.User;
+import com.wustzdy.springboot.crud.entity.UserEntity;
 import com.wustzdy.springboot.crud.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,13 +19,13 @@ public class UserController {
     }
 
     @RequestMapping(value = "/showDao")
-    public List<User> showDao(int age) {
+    public List<UserEntity> showDao(int age) {
         return userService.showDao(age);
     }
 
     @RequestMapping(value = "/insert")
-    public String insert(String userName, int userAge) {
-        return userService.insert(userName, userAge);
+    public String insert(String userName, String passWord) {
+        return userService.insert(userName, passWord);
     }
 
     @RequestMapping(value = "/getId")

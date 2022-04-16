@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @SpringBootApplication(scanBasePackages = "com.wustzdy.springboot.crud") //1
-@MapperScan(basePackages = "com.wustzdy.springboot.crud.dao") //2
+@MapperScan(basePackages = "com.wustzdy.springboot.crud.mapper") //2
 public class springBootDataSourceApplication {
 
     public static void main(String[] args) {
